@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: sung-rc2
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: kubia2
+    spec:
+      containers:
+      - name: sung
+        image: luksa/kubia
+        ports:
+        - containerPort: 8080
