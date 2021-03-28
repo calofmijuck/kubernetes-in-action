@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: sung
+spec:
+  rules:
+  - host: sung.example.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: sung
+          servicePort: 80
